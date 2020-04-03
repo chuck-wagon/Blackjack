@@ -1,0 +1,99 @@
+body {
+	text-align: center;
+	color: rgb(32, 4, 4);
+	background-image: url("https://casinocanberra.com.au/wp-content/uploads/2016/05/blackjack-1.jpg");
+	background-repeat: no-repeat;
+	background-blend-mode: multiply;
+	background-color: cornsilk;
+	background-position: top;
+}
+h1 {
+	font-size: 3em;
+	text-shadow: darkgreen;
+}
+button {
+	font-size: 1em;	
+}
+#hit {
+	display: none;
+}
+#stand {
+	display: none;
+}
+#let-it-ride { 
+  	display: none;
+  	width: 380px;
+	height: 270px;
+	background: url(https://media.giphy.com/media/l2SqgkzuiOQZKeLLi/giphy.gif) 0 0;
+	margin-top: 170px;
+	margin-left: 10px;
+}
+#hit-me-gif { 
+	display: none;
+	width: 380px;
+  	height: 270px;
+  	background: url(https://media.giphy.com/media/2zAW4ihpp7I3u/giphy.gif) 0 0;
+  	margin-top: 170px;
+  	margin-left: 10px;
+}
+#dealer-21 { 
+	display: none;
+	width: 380px;
+  	height: 270px;
+  	background: url(https://media.giphy.com/media/26ufcZICbgCSGe5sQ/giphy.gif) 0 0;
+  	margin-top: 170px;
+  	margin-left: 10px;
+}
+#bird-run {
+	display: none;
+	width: 380px;
+	height: 270px;
+	background: url(https://media.giphy.com/media/ceHKRKMR6Ojao/giphy.gif) 0 0;
+	margin-top: 170px;
+	margin-left: 10px;
+}
+#stewie-excited {
+	display: none;
+	width: 380px;
+	height: 270px;
+	background: url(https://media.giphy.com/media/l0HlSFMhjVbgyA32U/giphy.gif) 0 0;
+	margin-top: 170px;
+	margin-left: 10px;
+}
+#rick-wink {
+	display: inline-block;
+	width: 380px;
+	height: 270px;
+	background: url(https://media.giphy.com/media/l41JU9pUyosHzWyuQ/giphy.gif) 0 0;
+	margin-top: 170px;
+	margin-left: 10px;
+}
+#randy-gerald {
+	display: none;
+	width: 380px;
+	height: 270px;
+	background: url(https://media.giphy.com/media/l2Sq81ZnWfJPLARB6/giphy.gif) 0 0;
+	margin-top: 170px;
+	margin-left: 10px;
+}
+
+
+
+
+
+
+/* #colorcasino {
+	width: 380px;
+	height: 270px;
+	background: url(https://media.giphy.com/media/Tw8YcsiNi1qSc/giphy.gif) 0 0;
+	margin-top: 170px;
+	margin-left: 10px;
+}
+#home {
+	width: 380px;
+	height: 270px;
+	background: url(https://media.giphy.com/media/l2Sq81ZnWfJPLARB6/giphy.gif) 0 0;
+}
+  */
+
+
