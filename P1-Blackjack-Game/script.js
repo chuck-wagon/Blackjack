@@ -8,7 +8,6 @@ let dealer = []; // this is the dealer's hand
 let playerScore = 0;
 let dealerScore = 0;
 
-
 //onclick="document.getElementById('start').style.display = 'block';
 document.getElementById('start').addEventListener('click', start);
 document.getElementById('stand').addEventListener('click', stand);
@@ -16,18 +15,18 @@ document.getElementById('hit').addEventListener('click', hit);
 
 
 function start(e) {
-    e.preventDefault() //prevent refresh
+    //e.preventDefault() //prevent refresh
     //document.getElementById('stand').addEventListener('click', stand);
     // display none for hit stand button then when click start make visible and hide in endgame function
     document.getElementById('hit').style.display="inline-block";
     document.getElementById('stand').style.display="inline-block";
 
-    // document.getElementById('rick-wink').style.display="none";
-    // document.getElementById('let-it-ride').style.display="none";
-    // document.getElementById('dealer-21').style.display="none";
-    // document.getElementById('hit-me-gif').style.display="none";
-    // document.getElementById('stewie-excited').style.display="none";
-    // document.getElementById('bird-run').style.display="none";
+    document.getElementById('randy-gerald').style.display="none";
+    document.getElementById('let-it-ride').style.display="none";
+    document.getElementById('dealer-21').style.display="none";
+    document.getElementById('hit-me-gif').style.display="none";
+    document.getElementById('stewie-excited').style.display="none";
+    document.getElementById('bird-run').style.display="none";
     shuffle();
     deal();
 }
@@ -104,7 +103,7 @@ function stand (e) {
         dealer.push(deck.pop());
         score();
     }
-    if (playerScore > dealerScore && dealerScore >= 17) {
+    if (playerScore > dealerScore && dealerScore >= 17 && playerScore <= 21) {
         console.log('Player won!');
         document.getElementById('let-it-ride').style.display="inline-block";
         endGame();
