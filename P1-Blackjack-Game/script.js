@@ -20,13 +20,20 @@ function start(e) {
     // display none for hit stand button then when click start make visible and hide in endgame function
     document.getElementById('hit').style.display="inline-block";
     document.getElementById('stand').style.display="inline-block";
+    document.getElementById('start').style.display="none";
+
+    // document.getElementById("explode").pause;  
 
     document.getElementById('randy-gerald').style.display="none";
     document.getElementById('let-it-ride').style.display="none";
     document.getElementById('dealer-21').style.display="none";
     document.getElementById('hit-me-gif').style.display="none";
     document.getElementById('stewie-excited').style.display="none";
-    document.getElementById('bird-run').style.display="none";
+    document.getElementById('explosion').style.display="none";
+    document.getElementById('rick-wink').style.display="none";
+    document.getElementById('cat-skydive').style.display="none";
+    document.getElementById('peter-fall').style.display="none";
+    
     shuffle();
     deal();
 }
@@ -67,7 +74,7 @@ function displayPlayer () {
     player.forEach((card)=>{
         cardStr += card+' '
     })
-    document.getElementById('player').textContent = cardStr
+    document.getElementById('player').textContent = ('Player has ') + cardStr;
 }
 function displayDealer (visible) {
     var cardStr = ''
@@ -79,19 +86,27 @@ function displayDealer (visible) {
     else {
          cardStr = dealer[0]+' x'
     }
-    document.getElementById('dealer').textContent = cardStr
+    document.getElementById('dealer').textContent = ('Dealer has ') + cardStr;
 }  
 // Below is the hit function, the user can click as many times until hand breaks
 function hit (e) {
     console.log('(player hit)')
     player.push(deck.pop())
     //document.getElementById('player').textContent = player
+    displayPlayer();
     score();
     if (playerScore > 21) {
         console.log('BUST!');
         // document.getElementById("hit").remove();
+        document.getElementById('explosion').style.display="inline-block";
+        document.getElementById("explode");
+        var x = document.getElementById("explode"); 
+
+        function playAudio() { 
+          x.play();
+        }
+        playAudio();
         endGame();
-        document.getElementById('hit-me-gif').style.display="inline-block";
     }
 }
 function stand (e) {
@@ -101,26 +116,31 @@ function stand (e) {
     while (dealerScore < 17) {
         console.log('(dealer thought about it and took a hit)');
         dealer.push(deck.pop());
+        displayDealer(true);
         score();
     }
     if (playerScore > dealerScore && dealerScore >= 17 && playerScore <= 21) {
         console.log('Player won!');
         document.getElementById('let-it-ride').style.display="inline-block";
+        displayDealer(true);
         endGame();
     }
     if (dealerScore > playerScore && dealerScore <= 21) {
         console.log('Dealer won');
         document.getElementById('dealer-21').style.display="inline-block";
+        displayDealer(true);
         endGame();
         }
         if (playerScore >= 17 && dealerScore >=17 && playerScore === dealerScore) {
             console.log('PUSH! PLAYER AND DEALER TIE!');
-            document.getElementById('bird-run').style.display="inline-block";
+            document.getElementById('peter-fall').style.display="inline-block";
+            displayDealer(true);
             endGame();
         }
         else if (dealerScore > 21) {
             console.log('Dealer BUST player wins!');
             document.getElementById('stewie-excited').style.display="inline-block";
+            displayDealer(true);
             endGame();
         }
 }  
@@ -128,7 +148,7 @@ function endGame () {
     console.log('DEAL AGAIN!')
     document.getElementById('hit').style.display="none";
     document.getElementById('stand').style.display="none";
-    document.getElementById('win').textContent = '';
+    document.getElementById('start').style.display="inline-block";
 
 
     deck = []; 

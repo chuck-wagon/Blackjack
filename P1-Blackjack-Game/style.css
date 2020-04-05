@@ -25,7 +25,7 @@ button {
   	width: 380px;
 	height: 270px;
 	background: url(https://media.giphy.com/media/l2SqgkzuiOQZKeLLi/giphy.gif) 0 0;
-	margin-top: 170px;
+	margin-top: 100px;
 	margin-left: 10px;
 }
 #hit-me-gif { 
@@ -33,7 +33,7 @@ button {
 	width: 380px;
   	height: 270px;
   	background: url(https://media.giphy.com/media/2zAW4ihpp7I3u/giphy.gif) 0 0;
-  	margin-top: 170px;
+  	margin-top: 100px;
   	margin-left: 10px;
 }
 #dealer-21 { 
@@ -41,15 +41,15 @@ button {
 	width: 380px;
   	height: 270px;
   	background: url(https://media.giphy.com/media/26ufcZICbgCSGe5sQ/giphy.gif) 0 0;
-  	margin-top: 170px;
+  	margin-top: 100px;
   	margin-left: 10px;
 }
-#bird-run {
+#explosion {
 	display: none;
-	width: 380px;
+	width: 750px;
 	height: 270px;
-	background: url(https://media.giphy.com/media/ceHKRKMR6Ojao/giphy.gif) 0 0;
-	margin-top: 170px;
+	background: url(https://media.giphy.com/media/X92pmIty2ZJp6/giphy.gif) 0 0;
+	margin-top: 100px;
 	margin-left: 10px;
 }
 #stewie-excited {
@@ -57,7 +57,7 @@ button {
 	width: 380px;
 	height: 270px;
 	background: url(https://media.giphy.com/media/l0HlSFMhjVbgyA32U/giphy.gif) 0 0;
-	margin-top: 170px;
+	margin-top: 100px;
 	margin-left: 10px;
 }
 #rick-wink {
@@ -65,35 +65,42 @@ button {
 	width: 380px;
 	height: 270px;
 	background: url(https://media.giphy.com/media/l41JU9pUyosHzWyuQ/giphy.gif) 0 0;
-	margin-top: 170px;
+	margin-top: 100px;
 	margin-left: 10px;
 }
+
 #randy-gerald {
 	display: inline-block;
 	width: 380px;
 	height: 270px;
 	background: url(https://media.giphy.com/media/l2Sq81ZnWfJPLARB6/giphy.gif) 0 0;
-	margin-top: 170px;
+	margin-top: 100px;
 	margin-left: 10px;
 }
 
-
-
-
-
-
-/* #colorcasino {
+#cat-skydive {
+	display: none;
 	width: 380px;
-	height: 270px;
-	background: url(https://media.giphy.com/media/Tw8YcsiNi1qSc/giphy.gif) 0 0;
-	margin-top: 170px;
+	height: 250px;
+	background: url(https://media.giphy.com/media/145S7RTigVkfEA/giphy.gif) 0 0;
+	margin-top: 100px;
 	margin-left: 10px;
 }
-#home {
-	width: 380px;
-	height: 270px;
-	background: url(https://media.giphy.com/media/l2Sq81ZnWfJPLARB6/giphy.gif) 0 0;
+
+#peter-fall {
+	display: none;
+	width: 500px;
+	height: 325px;
+	background: url(https://media.giphy.com/media/bFTcFOgY2dEOc/giphy.gif) 0 0;
+	margin-top: 100px;
+	margin-left: 10px;
 }
-  */
-
-
+#player {
+	font-size: 3em;
+	text-align: right;
+}
+#dealer {
+	text-decoration: stroke, white;
+	font-size: 3em;
+	text-align: right;
+}
