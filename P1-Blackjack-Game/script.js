@@ -15,7 +15,7 @@ let dealerScore = 0;
 document.getElementById('start').addEventListener('click', start);
 document.getElementById('stand').addEventListener('click', stand);
 document.getElementById('hit').addEventListener('click', hit);
-document.getElementById("happy-sandbox").play();
+//document.getElementById("happy-sandbox").play();
 
 
 function start(e) {
@@ -36,7 +36,9 @@ function start(e) {
     document.getElementById('cat-skydive').style.display="none";
     document.getElementById('peter-fall').style.display="none";
     document.getElementById('wonka').style.display="none";
+    document.getElementById("click-button").play();
     document.getElementById("happy-sandbox").play();
+
     shuffle();
     deal();
 }
@@ -57,7 +59,7 @@ function deal() {
     
     console.log('The player hand is', player);
     console.log('The dealer hand is', dealer);
-    
+
     displayPlayer();
     displayDealer(false);
     score();
@@ -84,7 +86,7 @@ function displayDealer (visible) {
         })
     }
     else {
-         cardStr = dealer[0]+' x'
+         cardStr = dealer[0]+' ?'
     }
     document.getElementById('dealer').textContent = ('Dealer has ') + cardStr;
 }  
@@ -92,7 +94,6 @@ function displayDealer (visible) {
 function hit (e) {
     console.log('(player hit)')
     player.push(deck.pop())
-    //document.getElementById('player').textContent = player
     displayPlayer();
     score();
     if (playerScore > 21) {
@@ -132,7 +133,7 @@ function stand (e) {
         if ((playerScore === dealerScore) && (playerScore && dealerScore <= 21)) {
             console.log('PUSH! PLAYER AND DEALER TIE!');
             document.getElementById('office').style.display="inline-block";
-            document.getElementById('peter-fall').style.display="inline-block";
+            //document.getElementById('peter-fall').style.display="inline-block";
             document.getElementById("push-sound").play();
             
             displayDealer(true);
@@ -153,8 +154,10 @@ function endGame () {
     document.getElementById('hit').style.display="none";
     document.getElementById('stand').style.display="none";
     document.getElementById('start').style.display="inline-block";
+    document.getElementById('dealer').textContent = ('Dealer ') + dealerScore;
+    document.getElementById('player').textContent = ('Player ') + playerScore;
 
-    deck = []; 
+    deck = [];  
     player = [];
     dealer = [];
     playerScore = 0;
