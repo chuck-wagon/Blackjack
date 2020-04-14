@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width, initial-scale=1.0">
     <title>Auth Boilerplate</title>
     <link rel="stylesheet" href="/css/style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">     
 </head>
-<body> need entry point for text ( <%- body %>)
+<body>
     <%- include('partials/nav') %>
     <div>
         <%- body %>
     </div>
     <%- include('partials/footer') %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, {});
+      });
+    </script>
+
 </body>
+
 </html>
+<!-- need entry point for text ( <%- body %>) -->
+

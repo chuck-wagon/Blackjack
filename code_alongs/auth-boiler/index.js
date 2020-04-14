@@ -9,6 +9,9 @@ let layouts = require('express-ejs-layouts')
 // Create an app instance
 let app = express()
 
+/************
+ * SETTINGS / MIDDLEWARE
+ * ********************/
 // Set template language to EJS
 app.set('view engine', 'ejs')
 
@@ -17,6 +20,10 @@ app.use(layouts)
 
 // set up the static folder with 
 app.use(express.static("static"))
+
+// Decrypt the variables coming in via POST routes (from forms)
+app.use(express.urlencoded({ extended: false }))
+
 
 // ROUTES*******************
 // create a homepage route
